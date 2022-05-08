@@ -1,7 +1,3 @@
-import random
-import pandas as pd 
-import matplotlib.pyplot as plt
-import numpy as np
 from clases import *
 try:
   f = open('USA_Housing.csv')
@@ -23,6 +19,20 @@ buscar_zona_min_dormitorios(housing, 5)
 buscar_zona_poblacion(housing)
 
 buscar_zona_precio(housing)
+
+#Ejemplos graficas
+grafico(housing["Media de edad de las casas"], "bar")
+
+grafico(housing["Media de dormitorios"], "hist")
+
+dispersion("Salario medio anual de la zona", "Precio")
+
+dispersion("Media de edad de las casas", "Precio")
+
+dispersion("Media de habitaciones", "Media de dormitorios")
+
+dispersion("Poblacion de la zona", "Salario medio anual de la zona")
+
 
 
 
